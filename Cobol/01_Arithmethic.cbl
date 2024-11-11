@@ -1,0 +1,26 @@
+       IDENTIFICATION DIVISION.
+        PROGRAM-ID. 01_ARITHMETHIC.
+        DATA DIVISION.
+        WORKING-STORAGE SECTION.
+        01 WS-INPUT-01 PIC 9(3).
+        01 WS-INPUT-02 PIC 9(3).
+        01 WS-SUM PIC 9(4).
+        01 WS-DIFFERENCE PIC S9(3).
+        01 WS-PRODUCT PIC 9(4).
+        01 WS-QUOTIENT PIC 9(3)v9(2).
+        PROCEDURE DIVISION.
+            DISPLAY "ENTER 1ST NUMBER: ".
+            ACCEPT WS-INPUT-01.
+            DISPLAY "ENTER 2ND NUMBER: ".
+            ACCEPT WS-INPUT-02.
+
+            COMPUTE WS-SUM = WS-INPUT-01 + WS-INPUT-02.
+            COMPUTE WS-DIFFERENCE = WS-INPUT-01 - WS-INPUT-02.
+            COMPUTE WS-PRODUCT = WS-INPUT-01 * WS-INPUT-02.
+            COMPUTE WS-QUOTIENT = WS-INPUT-01 / WS-INPUT-02.
+
+            DISPLAY "SUM: " WS-SUM.
+            DISPLAY "DIFFERENCE: " WS-DIFFERENCE.
+            display "PRODUCT: " WS-PRODUCT.
+            display "QUOTIENT: " WS-QUOTIENT.
+            STOP RUN.
